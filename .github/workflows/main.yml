@@ -3,14 +3,27 @@ name: workflows
 on: push
 
 jobs: 
-   job1:
-     name: JOB1
-     runs-on: ubuntu-latest
-     steps:
-        - name: running single command in Job1
-          run: echo "Hi this is my first Githubworkflow"
-        - name: Checkign OS release for GitHub Hosted runner"
-          run: cat /etc/os-release
+  job1:
+    name: JOB1
+    runs-on: ubuntu-latest
+    steps:
+      - name: running single command in Job1
+        run: echo "Hi this is my first Githubworkflow"
+      - name: Checkign OS release for GitHub Hosted runner"
+        run: cat /etc/os-release
+      - name: calling sleep
+        run: sleep 20
+  
+  job2:
+    name: JOB2
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking the host name for runner
+        run: hostname
+      - name: Running multiple commands
+        run: |
+          echo "Hi from kumar"
+          echo "Current time is `date`"
 
 
    
