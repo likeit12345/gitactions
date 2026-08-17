@@ -1,6 +1,9 @@
 name: workflows 
 
-on: push
+on: 
+  
+  schedule:
+    - cron: "*/1 * * * *"
 
 jobs: 
   job1:
