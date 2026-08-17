@@ -1,21 +1,6 @@
-name: Node.js CI/CD
+name: workflows 
 
 on:
   push:
-    branches:
-      - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-    - name: Set Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '13'
-
-    - name: Install dependencies
-      run: npm install
 
 
