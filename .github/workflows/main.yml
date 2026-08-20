@@ -1,10 +1,6 @@
-name: workflows 
+name: masterworkflows 
 
 on: 
-  
-  schedule:
-    - cron: "5 * * * *"
-  workflow_dispatch: 
   push:
 
 jobs: 
