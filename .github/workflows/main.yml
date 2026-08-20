@@ -51,6 +51,23 @@ jobs:
             ./artifacts
             !**/hostname.txt
          
+ 
+  job2:
+    name: JOB3
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking current directoy
+        run: | 
+          pwd
+          ls -ltr
+      - name: download single file artifact
+        uses: actions/download-artifact@v6.0.0
+        with:
+          name: single_file
+      - name: checking current directoy post download
+        run: |
+          pwd
+          ls -ltr
 
           
       
